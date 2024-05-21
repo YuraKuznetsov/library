@@ -17,5 +17,7 @@ public class BookLobs {
     @MapsId
     private Book book;
     @Lob
+    private byte[] cover;
+    @Lob
     private byte[] content;
 }

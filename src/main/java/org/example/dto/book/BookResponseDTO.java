@@ -1,4 +1,4 @@
-package org.example.dto;
+package org.example.dto.book;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -11,4 +11,5 @@ public class BookResponseDTO {
     private String title;
     private String author;
     private String description;
+    private byte[] cover;
 }

@@ -16,5 +16,9 @@ public class Book {
     private Integer id;
     private String title;
     private String author;
+    @Column(length = 1000)
     private String description;
+    @OneToOne(mappedBy = "book", cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private BookLobs bookLobs;
 }

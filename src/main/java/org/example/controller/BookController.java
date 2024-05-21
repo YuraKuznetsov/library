@@ -1,9 +1,10 @@
 package org.example.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.dto.BookCreateDTO;
-import org.example.dto.BookResponseDTO;
-import org.example.dto.BookSearchParams;
+import org.example.dto.book.BookCreateDTO;
+import org.example.dto.book.BookResponseDTO;
+import org.example.dto.book.BookSearchParams;
+import org.example.dto.book.BookUpdateDTO;
 import org.example.service.BookService;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
@@ -15,12 +16,18 @@ import java.util.List;
 @RestController
 @RequestMapping("/book")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:3000")
 public class BookController {
 
     private final BookService bookService;
 
-    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_PDF_VALUE)
-    public Resource getFile(@PathVariable("id") Integer bookId) {
+    @GetMapping("/{id}")
+    public BookResponseDTO getBook(@PathVariable("id") Integer bookId) {
+        return bookService.getBook(bookId);
+    }
+
+    @GetMapping(value = "/{id}/resource", produces = MediaType.APPLICATION_PDF_VALUE)
+    public Resource getBookResource(@PathVariable("id") Integer bookId) {
         return bookService.getBookResource(bookId);
     }
 
@@ -32,5 +39,15 @@ public class BookController {
     @GetMapping
     public List<BookResponseDTO> searchBooks(@Valid BookSearchParams searchParams) {
         return bookService.searchBooks(searchParams);
+    }
+
+    @PutMapping("/{id}")
+    public void updateBook(@PathVariable("id") Integer bookId, @Valid BookUpdateDTO updateDTO) {
+        bookService.updateBook(bookId, updateDTO);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable("id") Integer bookId) {
+        bookService.deleteById(bookId);
     }
 }
