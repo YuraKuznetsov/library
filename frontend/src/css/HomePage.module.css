@@ -1,0 +1,19 @@
+.search-result {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #babbae;
+    padding: 0 20px 20px;
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: #666;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}

@@ -1,0 +1,97 @@
+.book-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.book {
+    display: flex;
+    align-items: stretch;
+    column-gap: 1.5rem;
+
+    border-bottom: 1px solid #f2f0e7;
+    border-radius: 5px;
+    padding: 20px 25px;
+    background-color: #f9f9f9;
+}
+
+.book__cover {
+    flex: 0 0 130px;
+    display: flex;
+    align-items: center;
+}
+
+.book__cover img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 4px;
+}
+
+.book_main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 0.5rem;
+}
+
+.book_details {
+    line-height: 1.5rem;
+    width: 100%;
+    padding: 5px;
+}
+
+.book__title {
+    font-weight: 700;
+}
+
+.book__description {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+
+.book img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.book__buttons {
+    display: flex;
+    justify-content: right;
+    column-gap: 1rem;
+}
+
+.book_button {
+    color: #fff;
+    text-align: center;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color .3s;
+    font-size: 0.9rem;
+}
+
+#open-button {
+    background-color: #0376b8;
+}
+
+#open-button:hover {
+    background-color: #024e7a;
+}
+
+#update-button {
+    background-color: #ffc107;
+}
+
+#update-button:hover {
+    background-color: #d2a317;
+}
+
+#delete-button {
+    background-color: #dc3545;
+}
+
+#delete-button:hover {
+    background-color: #9d2632;
+}

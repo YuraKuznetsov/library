@@ -1,0 +1,34 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+
+    /*max-width: 70%;*/
+
+    color: #666;
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.search-option {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
